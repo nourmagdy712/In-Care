@@ -1,0 +1,357 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+:root{
+  --fontfamily: "Montserrat", sans-serif;
+  --darkblue:#194868;
+}
+body{
+    background-color:#ececec;
+    font-family: var(--fontfamily);
+    width: 100%;
+    overflow-x: hidden;
+}
+.sidenav {
+  height: 100%;
+  width: 270px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color:#194868;
+  overflow-x: hidden;
+  padding-top: 10px;
+  border-radius: 0px 15px 10px 0px;
+}
+
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  height: 6vh;
+  margin-bottom: 5px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #fff;
+  display: block;
+  border-radius: 15px;
+}
+
+.sidenav a:hover {
+  background-color: #40719281;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  padding-top: 150px;
+  padding-left: 50px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 50;
+}
+
+.modal-content {
+  float: left;
+  position: relative;
+  background-color: #D4E6F1;
+  border-radius: 15px;
+  margin-left: 470px;
+  padding: 0;
+  width: 30%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.modal-body {
+  padding: 50px 1px;
+  text-align: center;
+  font-family: "Spectral", serif;
+  font-weight: bold;
+}
+
+.boton{
+  width: 140px;
+  height: 45px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  color: #fff;
+  background-color:#194868 ;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+}
+.boton:hover{
+  box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+  transform: translateY(-7px);
+}
+
+
+.navicons{
+  font-size: 25px;
+  color: #5495bd;
+  cursor: pointer;
+  background-color: inherit;
+  border: none;
+  display: inline-block;
+}
+.navicons:hover{
+  color: #194868;
+}
+.closebtn{
+  position: absolute;
+  top: 2%;
+  margin-left: 80%;
+  font-size: 35px;
+  z-index: 30;
+  color: #fff;
+  display: none;
+}
+#bar{
+  position: absolute;
+  top: 60px;
+  left: 30px;
+  display: none;
+  font-size: xx-large;
+}
+
+
+#sidenav{
+  width: 0px;
+  height: 100%;
+  transition: 0.5s;
+  z-index: 40;
+  top: 0;
+  left: 0;
+  background-color:#194868 ;
+  overflow-x: hidden;
+  padding-top: 10px;
+  border-radius: 0px 15px 10px 0px;
+  position: fixed;
+  
+}
+
+#sidenav a {
+  transition: 0.5s;
+  padding: 6px 8px 6px 16px;
+  height: 5vh;
+  margin-bottom: 5px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #fff;
+  display: block;
+  border-radius: 15px;
+}
+
+#sidenav a:hover {
+  background-color: #40719281;
+}
+
+
+ 
+  .row {
+    margin: 8px -16px;
+  }
+  .row,
+  .row > .column {
+    padding: 8px;
+  }
+
+  .column {
+    display:flex;
+    float: right;
+    margin-left: 80px;
+   margin-right: 220px;
+   margin-top: 25px;
+    width: 45%;
+    box-sizing: border-box;
+    
+  }
+
+  .content {
+    background-color:#fff;
+    color: black;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+    padding: 60px 10px 60px 60px;
+    width: 100%;
+    position: relative;
+    display: inline-block;
+    border-radius: 30px;
+    line-height: 25px;
+  }
+ 
+  
+  #toast {
+    visibility: hidden;
+    min-width: 90px;
+    height: 40px;
+    margin-left: -125px;
+    color: #fff;
+    background-color: #5495bd;
+    border: none;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    text-align: center;
+    padding: 8px 10px 40px 10px;
+    position: fixed;
+    z-index: 55;
+    left: 20%;
+    top: 100px;
+    font-size: 15px;
+  }
+  
+  #toast.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  }
+  
+  @-webkit-keyframes fadein {
+    from {
+      top: 0;
+      opacity: 0;
+    }
+    to {
+      top: 100px;
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadein {
+    from {
+      top: 0;
+      opacity: 0;
+    }
+    to {
+      top: 100px;
+      opacity: 1;
+    }
+  }
+  
+  @-webkit-keyframes fadeout {
+    from {
+      top: 100px;
+      opacity: 1;
+    }
+    to {
+      top: 0;
+      opacity: 0;
+    }
+  }
+  
+  @keyframes fadeout {
+    from {
+      top: 100px;
+      opacity: 1;
+    }
+    to {
+      top: 0;
+      opacity: 0;
+    }
+  }
+  
+@media (max-width: 1200px) {
+  .sidenav{
+    width:280px !important;
+  }
+  body{
+    font-size: larger !important;
+  }
+  .row{
+    margin-top: 80px !important;
+  }
+  .column{
+    margin-right: 180px !important;
+  }
+}
+@media (max-width: 900px) {
+  .sidenav{
+    width: 0px !important;
+  }
+  #bar{
+    display: inline-block !important;
+    
+  }
+  .modal-content{
+    display: inline-block !important;
+    justify-content: center !important;
+    margin-left: 100px !important;
+    width: 300px;
+    padding-right: 10px !important;
+  }
+  .modal-body {
+    padding-top:40px !important;
+    padding-bottom: 40px !important;
+    text-align: center !important;
+  }
+  
+  .boton{
+    width:100px !important;
+  }
+  #toast{
+    margin-left: 20px !important;
+    height: 20px !important;
+  }
+  .row{
+    margin-top: 100px !important;
+  }
+  .column {
+    margin-left: 120px !important;
+   margin-right: 100px !important;
+   margin-top: 15px !important;
+    width: 67% !important;
+ }
+  .content {
+      padding: 30px !important;
+     }
+   #cancell{
+      margin-left: 15px !important;
+     }
+  h2{
+    font-size: larger !important;
+    
+  }
+  .content i{
+    margin-left: 13px !important;
+  }
+ 
+  
+  .but{
+   margin-left: 140px !important;
+   margin-top: 4px !important;
+  }
+  
+}
+@media (max-width: 450px){
+.modal-content{
+  width: 230px!important;
+  margin-left: 10px!important;
+}
+.column{
+  width: 75% !important;
+  margin-right: 40px !important;
+}
+}
+.logout-btn{
+  background: inherit;
+  border: inherit;
+  color: #fff;
+  font-size: 20px; 
+  padding: 6px 10px 6px 16px;
+  text-align: start;
+  cursor: pointer;
+  width: 100%;
+  height: 6vh;
+  font-family: var(--fontfamily);
+  
+}
+
+.logout-btn:hover {
+  background-color: #40719281; 
+}
+  
